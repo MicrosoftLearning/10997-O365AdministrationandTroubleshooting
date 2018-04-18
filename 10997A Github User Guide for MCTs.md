@@ -1,4 +1,4 @@
-GitHub User Guide for MCTs
+﻿GitHub User Guide for MCTs
 ==========================
 
 Cloud services, such as Office 365, are updated frequently. This leads to issues for Microsoft Certified Trainers (MCTs) when they teach courses, such as *20347: Enabling and Managing Office 365* or *10997:* *Office 365 Administration and Troubleshooting*, because lab steps change frequently as the service changes. Due to the frequency of the changes and the fact that there may not be any notification when changes occur, it can be difficult for the course development team to rapidly identify and address any lab changes.
@@ -97,13 +97,13 @@ To install the GitHub Desktop, perform the following steps:
 
 <!-- -->
 
-1.  Click **Download for Windows**.
+2.  Click **Download for Windows**.
 
-2.  When the **GitHubDesktopSetup.exe** file has downloaded, double-click the file to start the setup, or click **Run** if you receive a prompt from Internet Explorer.
+3.  When the **GitHubDesktopSetup.exe** file has downloaded, double-click the file to start the setup, or click **Run** if you receive a prompt from Internet Explorer.
 
-3.  In the **Application Install - Security Warning** dialog box, click **Install**.
+4.  In the **Application Install - Security Warning** dialog box, click **Install**.
 
-4.  Close GitHub Desktop.
+5.  Close GitHub Desktop.
 
 ### Installing Pandoc version 1.19.2
 
@@ -115,27 +115,33 @@ To install Pandoc, perform the following steps:
 
 <!-- -->
 
-1.  Click **pandoc-1.19.2-windows.msi**.
+2.  Click **pandoc-1.19.2-windows.msi**.
 
-2.  When the **pandoc-1.19.2-windows.msi** file has downloaded, double-click the file to start the setup, or click **Run** if you receive a prompt from Internet Explorer.
+3.  When the **pandoc-1.19.2-windows.msi** file has downloaded, double-click the file to start the setup, or click **Run** if you receive a prompt from Internet Explorer.
 
-3.  In the **Pandoc 1.19.2 Setup** dialog, review the License Agreement, select **I accept the terms in the License Agreeement**, and then click **Install**.
+4.  In the **Pandoc 1.19.2 Setup** dialog, review the License Agreement, select **I accept the terms in the License Agreeement**, and then click **Install**.
 
-4.  Click **Finish**.
+5.  Click **Finish**.
 
 ### Installing PowerShell Community Extensions 3.2.2
 
-PowerShell Community Extensions (PSCX) is an open-source project that extends Windows PowerShell with scripts, cmdlets, functions, and other features. PSCX version 3.2.2 is the most current (as of 2/27/2018) PSCX version. You use PSCX to create the .zip files that contain your .docx files. Please note, if you do not install these extensions, the document-creation script fails. The PSCX files are make available through the PowerShell Gallery at https://www.powershellgallery.com/packages/Pscx/3.2.2.
+PowerShell Community Extensions (PSCX) is an open-source project that extends Windows PowerShell with scripts, cmdlets, functions, and other features. PSCX version 3.2.2 is the most current (as of 2/27/2018) PSCX version. You use PSCX to create the .zip files that contain your .docx files. Please note, if you do not install these extensions, the document-creation script fails. The PSCX files are made available through the PowerShell Gallery at https://www.powershellgallery.com/packages/Pscx/3.2.2.
 
 To install PSCX 3.2.2, perform the following steps:
 <!-- -->
+
 1. Open Windows PowerShell as an administrator.
+
 2. Type **Install-Module -Name Pscx -RequiredVersion 3.2.2 -AllowClobber** and press Enter.
+
 3. If prompted, type **Y** to install a new NuGet provider version and press Enter.
+
 4. If prompted, type **Y** to allow the install from a untrusted repository and press Enter.
+
 5. Wait for the install to finish, and then close the Windows PowerShell Window.
 
 > **Important:** After you install Pandoc and PSCX, you must restart your computer to complete the installation. If you do not restart your computer, the document-creation script might fail.
+
 
 Downloading and printing lab files
 ----------------------------------
@@ -152,7 +158,7 @@ You need all of these folders if you want to print the lab files.
 
 ### Downloading the latest materials for course labs
 
-If you want to build Word documents from Markdown files, you must [clone](https://help.github.com/articles/cloning-a-repository/) or fetch a copy of the repo on your local computer. If you want to clone the files, you must know the GitHub location of the course files. You can use the **Search GitHub** search box on the GitHub home page to search for these files by using the course number. You also can browse through the repos under the [Microsoft Learning organization](https://github.com/MicrosoftLearning) page on GitHub. The Microsoft Learning page on GitHub is located at <https://github.com/MicrosoftLearning/>.
+If you want to build Word documents from Markdown files, you must [clone](https://help.github.com/articles/cloning-a-repository/) or fetch a copy of the repo on your local computer. If you want to clone the files, you must know the GitHub location of the course files. You can use the **Search GitHub** search box on the GitHub home page to search for these files by using the course number. You also can browse through the repos under the [Microsoft Learning organization](https://github.com/MicrosoftLearning) page on GitHub. The Microsoft Learning page on GitHub is located at [**https://github.com/MicrosoftLearning/**](https://github.com/MicrosoftLearning/).
 
 #### To clone the course repo to your local machine
 
@@ -160,23 +166,24 @@ If you want to build Word documents from Markdown files, you must [clone](https:
 
 <!-- -->
 
-1.  On the **repo** page, click **Clone or download**.
+2.  On the **repo** page, click **Clone or download**.
 
-2.  In the **Clone with HTTPS** dialog box, click **Open in Desktop**.
+3.  In the **Clone with HTTPS** dialog box, click **Open in Desktop**.
 
-3.  In the **Internet Explorer** confirmation dialog box, click **Allow** (or the equivalent for your browser).
+4.  In the **Internet Explorer** confirmation dialog box, click **Allow** (or the equivalent for your browser).
 
-4.  Switch to GitHub Desktop.
+5.  Switch to GitHub Desktop.
 
-5.  In the **Browse For Folder** dialog box, select a folder as the root for the local repo, and then click **Ok**.
+6.  In the **Browse For Folder** dialog box, select a folder as the root for the local repo, and then click **Ok**.
 
     If you plan to clone several repos, you can choose one common folder in this step. This creates a subfolder for each repo.
 
-6.  In the **Repositories** list, right-click the repository name, and then click **Open in Explorer** to view the local files.
+7.  In the **Repositories** list, right-click the repository name, and then click **Open in Explorer** to view the local files.
 
 After you clone a repo the first time, on subsequent visits, you can open GitHub Desktop, select the repository, and then click **Sync** to retrieve the latest files.
 
 > **Note:** For more information about synchronizing your repo, refer to Working with your remote repository on GitHub or GitHub Enterprise at <https://help.github.com/desktop/guides/contributing/working-with-your-remote-repository-on-github-or-github-enterprise/>.
+
 
 ### Printing the lab and LAK files
 
@@ -192,19 +199,20 @@ The Windows PowerShell script, Pandoc.ps1, is in the **\\Build** folder. The fol
 
 <!-- -->
 
-1.  Right-click the file **pandoc.ps1**, and then click **Run with PowerShell**.
+2.  Right-click the file **pandoc.ps1**, and then click **Run with PowerShell**.
 
-2.  In the **Windows PowerShell** window, if you receive an **Execution Policy Change** prompt, type **Y**, and then press Enter.
+3.  In the **Windows PowerShell** window, if you receive an **Execution Policy Change** prompt, type **Y**, and then press Enter.
 
-3.  When you receive the **What is the current version?** prompt, enter a short string or number to uniquely identify the .zip files that is built.
+4.  When you receive the **What is the current version?** prompt, enter a short string or number to uniquely identify the .zip files that is built.
 
 > > **Note:** The **current version** string is added to the name of the .zip file.
 
-1.  Switch to File Explorer, and in the **\\Build** folder, select the .zip files that you just were created. The file names will be **allfiles-vversion.zip** and **\*\*lab\_instructions-v\_\_version\_\_.zip\*\***.
+5.  Switch to File Explorer, and in the **\\Build** folder, select the .zip files that you just were created. The file names will be **allfiles-vversion.zip** and **\*\*lab\_instructions-v\_\_version\_\_.zip\*\***.
 
-2.  Move these files to a new location, so that you can avoid attempting to add them to the repo inadvertently as part of a Pull request.
+6.  Move these files to a new location, so that you can avoid attempting to add them to the repo inadvertently as part of a Pull request.
 
 > **Note:** To avoid receiving the **Execution Policy Change** prompt, you can change the [**Set-ExecutionPolicy**](https://technet.microsoft.com/en-us/library/ee176961.aspx) setting in Windows PowerShell to execute scripts without restriction. After changing the **ExecutionPolicy** property, be aware now scripts that you run have the power to make disruptive things happen to your computer.
+
 
 #### To print the lab files:
 
@@ -267,13 +275,13 @@ You can review and comment on changes that other users make, and Microsoft Learn
 
 <!-- -->
 
-1.  Click **Branch : *branchname***, and then from the **Branches** list, select the branch you want to copy.
+2.  Click **Branch : *branchname***, and then from the **Branches** list, select the branch you want to copy.
 
-2.  If there is only one branch, the **Branch** drop-down list shows **Branch: master**, and the only branch that is available is **master**.
+3.  If there is only one branch, the **Branch** drop-down list shows **Branch: master**, and the only branch that is available is **master**.
 
-3.  In the blank text box, type the name of the branch that you want to create.
+4.  In the blank text box, type the name of the branch that you want to create.
 
-4.  Click **Create branch: *new branch name*** when it appears.
+5.  Click **Create branch: *new branch name*** when it appears.
 
 #### To delete a repo branch:
 
@@ -281,9 +289,9 @@ You can review and comment on changes that other users make, and Microsoft Learn
 
 <!-- -->
 
-1.  Click ***n* branches**, where ***n*** is the number of existing branches.
+2.  Click ***n* branches**, where ***n*** is the number of existing branches.
 
-2.  On the **Branches** page, in the row for the branch that you want to delete, click **Delete this branch** icon.
+3.  On the **Branches** page, in the row for the branch that you want to delete, click **Delete this branch** icon.
 
 After you have created a Branch, you can clone the files to your local repo, update them on your computer, and then check in the changes from the GitHub Desktop. If you are working with Markdown or other text files, you can edit them in GitHub, and then check in the changes online.
 
@@ -293,13 +301,14 @@ After you have created a Branch, you can clone the files to your local repo, upd
 
 <!-- -->
 
-1.  Select the repo that contains your changes, and then click **Changes**.
+2.  Select the repo that contains your changes, and then click **Changes**.
 
-2.  Select the changes that you want to commit, and then in the **Summary** text box, write a short description of the change.
+3.  Select the changes that you want to commit, and then in the **Summary** text box, write a short description of the change.
 
-3.  In the **Description** text box, write a more-detailed description of the change, if necessary.
+4.  In the **Description** text box, write a more-detailed description of the change, if necessary.
 
-4.  Click **Commit to master**, and then click **Sync** to push the local changes to the online repo.
+5.  Click **Commit to master**, and then click **Sync** to push the local changes to the online repo.
+
 
 #### To edit files and commit changes in the online repo:
 
@@ -307,13 +316,14 @@ After you have created a Branch, you can clone the files to your local repo, upd
 
 <!-- -->
 
-1.  Click the **Edit this file** icon.
+2.  Click the **Edit this file** icon.
 
-2.  Make your changes in the **Edit file** tab of the webpage, and then click **Preview changes** to view your proposed changes, without committing them.
+3.  Make your changes in the **Edit file** tab of the webpage, and then click **Preview changes** to view your proposed changes, without committing them.
 
-3.  Under **Commit changes**, in the **Update *filename*** text box, enter a short description of the changes.
+4.  Under **Commit changes**, in the **Update *filename*** text box, enter a short description of the changes.
 
-4.  In the **Add an optional extended description...** text box, enter a more detailed description of the change, if necessary, and then click **Commit changes**.
+5.  In the **Add an optional extended description...** text box, enter a more detailed description of the change, if necessary, and then click **Commit changes**.
+
 
 #### To create a pull request:
 
@@ -321,13 +331,14 @@ After you have created a Branch, you can clone the files to your local repo, upd
 
 <!-- -->
 
-1.  Click **Branch:*branchname***, and then in the **Branches** list, select the branch for which you want to create a pull request.
+2.  Click **Branch:*branchname***, and then in the **Branches** list, select the branch for which you want to create a pull request.
 
-2.  Click **New pull request**, and then on the **Open a pull request** page, in the **Title** text box, update the name of the pull request, if necessary.
+3.  Click **New pull request**, and then on the **Open a pull request** page, in the **Title** text box, update the name of the pull request, if necessary.
 
-3.  On the **Write** tab, in the **Leave a comment** text box, provide a description of the proposed change, and then click **Create pull request**.
+4.  On the **Write** tab, in the **Leave a comment** text box, provide a description of the proposed change, and then click **Create pull request**.
 
 As we noted previously, you also can comment on pull requests and proposed changes (commits) that other users make. When you comment on a commit, you view a source diff of the file, and you then you can comment on specific changes on a line-by-line basis or on the entire commit.
+
 
 #### To review and comment on a pull request:
 
@@ -335,11 +346,12 @@ As we noted previously, you also can comment on pull requests and proposed chang
 
 <!-- -->
 
-1.  Click **Pull requests *n***, where ***n*** is the number of active pull requests.
+2.  Click **Pull requests *n***, where ***n*** is the number of active pull requests.
 
-2.  Select the pull request that you want to review, and then on the **Write** tab, in the **Leave a comment** text box, input your comment.
+3.  Select the pull request that you want to review, and then on the **Write** tab, in the **Leave a comment** text box, input your comment.
 
-3.  Click **Comment**.
+4.  Click **Comment**.
+
 
 #### To review and comment on a commit:
 
@@ -347,17 +359,18 @@ As we noted previously, you also can comment on pull requests and proposed chang
 
 <!-- -->
 
-1.  Click ***n* commits**, where ***n*** is the number of commits that have been submitted. If you want to review the latest commit, you can select the title/short description of the commit from file list.
+2.  Click ***n* commits**, where ***n*** is the number of commits that have been submitted. If you want to review the latest commit, you can select the title/short description of the commit from file list.
 
-2.  In the **source diff** section, select the change on which you want to comment by clicking the plus sign (**+)** that appears when the mouse hovers over the applicable change.
+3.  In the **source diff** section, select the change on which you want to comment by clicking the plus sign (**+)** that appears when the mouse hovers over the applicable change.
 
-3.  On the **Write** tab, in the **Comment** text box, provide your comment.
+4.  On the **Write** tab, in the **Comment** text box, provide your comment.
 
-4.  Click **Comment**.
+5.  Click **Comment**.
 
     If you wish to provide an overall comment on the commit, under ***n* comments on commit**, where ***n*** is the number of comments submitted, and then under the **Write** tab, in the **Leave a comment** text box, type your comment, and Click **Comment on this commit**.
 
 You also can make suggestions about an overall project, by submitting an Issue or commenting on an existing Issue.
+
 
 #### To submit an Issue:
 
@@ -365,11 +378,12 @@ You also can make suggestions about an overall project, by submitting an Issue o
 
 <!-- -->
 
-1.  Click **Issues**, and then click **New issue**.
+2.  Click **Issues**, and then click **New issue**.
 
-2.  In the **Title** text box, enter the title for the issue, and then in the **Leave a comment** text box, type a description of the issue or suggestion.
+3.  In the **Title** text box, enter the title for the issue, and then in the **Leave a comment** text box, type a description of the issue or suggestion.
 
-3.  Click **Submit new issue**.
+4.  Click **Submit new issue**.
+
 
 #### To review and comment on an existing issue:
 
@@ -377,13 +391,14 @@ You also can make suggestions about an overall project, by submitting an Issue o
 
 <!-- -->
 
-1.  Click **Issues**, and then select the title of the issue that you want to review.
+2.  Click **Issues**, and then select the title of the issue that you want to review.
 
-2.  On the **Issue name** page, on the **Write** tab, in the **Leave a comment** text box, type your comment.
+3.  On the **Issue name** page, on the **Write** tab, in the **Leave a comment** text box, type your comment.
 
-3.  Click **Comment**.
+4.  Click **Comment**.
 
 > Whenever you create an issue, or a comment on a pull request or commit, you also can include other GitHub users or teams into the conversation by performing a **mention** of them in the comment’s body. If you are familiar with Twitter, this feature will look very familiar.
+
 
 #### To mention a GitHub user in a comment:
 
@@ -391,6 +406,6 @@ You also can make suggestions about an overall project, by submitting an Issue o
 
 <!-- -->
 
-1.  Create your comment or issue, as described previously, and then in the **comment** text box, type **@**, followed by the user or team name, within the comment.
+2.  Create your comment or issue, as described previously, and then in the **comment** text box, type **@**, followed by the user or team name, within the comment.
 
 > > **Note:** When you type the **@** symbol, a list appears that contains GitHub users who are collaborators on the applicable project and anyone who is participating in the project’s comments. The list uses autocomplete as you type, so that you can filter the list easily.
