@@ -3,8 +3,8 @@
 > It is **strongly** recommended that you use the released files for instructor-led or online deliveries.
 
 ## Prerequisites
-* Pandoc 1.13.2
-  * Windows Installer: [https://github.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.13.2)
+* Pandoc 1.19.2
+  * Windows Installer: [https://github.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.19.2)
 * PowerShell Community Extensions 3.2.0
   * Installer: [http://pscx.codeplex.com/releases](http://pscx.codeplex.com/releases/view/133199)
 
