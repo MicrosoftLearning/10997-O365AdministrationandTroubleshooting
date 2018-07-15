@@ -1,4 +1,4 @@
-GitHub User Guide for MCTs
+﻿GitHub User Guide for MCTs
 ==========================
 
 Cloud services, such as Office 365, are updated frequently. This leads to issues for Microsoft Certified Trainers (MCTs) when they teach courses, such as *20347: Enabling and Managing Office 365* or *10997:* *Office 365 Administration and Troubleshooting*, because lab steps change frequently as the service changes. Due to the frequency of the changes and the fact that there may not be any notification when changes occur, it can be difficult for the course development team to rapidly identify and address any lab changes.
@@ -111,7 +111,7 @@ Pandoc is a tool that you can use to convert files from one format to another. I
 
 To install Pandoc, perform the following steps:
 
-1.  <span id="to-install-pandox-1.13.2" class="anchor"></span>In your browser, navigate to [https://GitHub.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.13.2).
+1.  <span id="to-install-pandox-1.19.2" class="anchor"></span>In your browser, navigate to [https://GitHub.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.19.2).
 
 <!-- -->
 
