@@ -3,10 +3,8 @@
 > It is **strongly** recommended that you use the released files for instructor-led or online deliveries.
 
 ## Prerequisites
-* Pandoc 1.19.2
-  * Windows Installer: [https://github.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.19.2)
-* PowerShell Community Extensions 3.2.0
-  * Installer: [http://pscx.codeplex.com/releases](http://pscx.codeplex.com/releases/view/133199)
+* Pandoc 2.7.3
+  * Windows Installer: [https://github.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/2.7.3)
 
 > For some scenarios, you may need to reboot your machine or log off after installing the two prerequisites. This manual build has only been tested with the above versions of each dependency.
 

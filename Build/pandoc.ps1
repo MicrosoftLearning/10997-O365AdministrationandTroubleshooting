@@ -1,4 +1,7 @@
-﻿function GetVersionNumber{
+﻿#requires -Version 5.1
+#requires -PSEdition Desktop
+
+function GetVersionNumber {
     $output = $null
     do {
         $output = Read-Host 'What is the current version?'
@@ -7,15 +10,13 @@
     return $output
 }
 
-function ZipFiles{
+function ZipFiles {
     param($filesDirectory, $docsDirectory, $versionData)
-    $filesOutput = "allfiles-v" + $versionData + ".zip"
     $docsOutput = "lab_instructions-v" + $versionData + ".zip"
-    Write-Zip ($filesDirectory + "*") -OutputPath $filesOutput -IncludeEmptyDirectories
-    Write-Zip ($docsDirectory + "*.docx") -OutputPath $docsOutput
+    Compress-Archive -Path ($docsDirectory + "*.docx") -DestinationPath $docsOutput
 }
 
-function AddVersionFooter{
+function AddVersionFooter {
     param($file, $versionData)
     $filePath = (Resolve-Path $file).Path
     $Word = New-Object -ComObject Word.Application
@@ -27,35 +28,33 @@ function AddVersionFooter{
     $Doc.Close()
 }
 
-function ConvertMarkdownToWord{
+function ConvertMarkdownToWord {
     param($inputFile, $outputFile, $versionData)
-    pandoc $inputFile -o $outputFile --reference-docx=template.docx 
+    pandoc $inputFile -o $outputFile --reference-doc=template.docx 
     AddVersionFooter $outputFile $versionData
 }
 
 $docsInputDirectory = "..\Instructions\"
-$filesInputDirectory = "..\Allfiles\"
 $outputDirectory = "Temp\"
 $docsOutputDirectory = $outputDirectory + "Lab Instructions\"
-$filesOutputDirectory = $outputDirectory + "Allfiles\"
 
 $version = GetVersionNumber
 
 ' Create Temp Directory'
-New-Item -ItemType Directory -Force -Path $docsOutputDirectory
+New-Item -ItemType Directory -Force -Path $docsOutputDirectory | Out-Null
 
 ' Create Lab Word Documents'
-foreach($file in Get-ChildItem $docsInputDirectory | Where-Object {$_.Extension -eq ".md"})
-{
+foreach ($file in Get-ChildItem $docsInputDirectory | Where-Object { $_.Extension -eq ".md" }) {
     $inputFile = $docsInputDirectory + $file.Name;
     $outputFile = $docsOutputDirectory + $file.BaseName + '.docx'
     ConvertMarkdownToWord $inputFile $outputFile $version
 }
 
-' Copy AllFiles '
-Copy-Item $filesInputDirectory –Destination $outputDirectory -Recurse -Container
 
-' Compress AllFiles & Lab Instructions '
+#' Copy AllFiles '
+#Copy-Item $filesInputDirectory –Destination $outputDirectory -Recurse -Container
+
+' Compress Lab Instructions '
 ZipFiles $filesOutputDirectory $docsOutputDirectory $version
 
 ' Remove Temp Directory'
